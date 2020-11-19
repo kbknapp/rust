@@ -19,6 +19,7 @@ __pycache__/
 *$py.class
 .project
 .settings/
+/config.toml
 .valgrindrc
 .vscode
 .favorites.json

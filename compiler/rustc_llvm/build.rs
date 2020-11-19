@@ -98,6 +98,10 @@ fn main() {
         (8, 0)
     };
 
+    if major > 6 {
+        optional_components.push("bpf");
+    }
+
     let required_components = &[
         "ipo",
         "bitreader",
