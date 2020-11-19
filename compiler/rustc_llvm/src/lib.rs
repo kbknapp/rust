@@ -175,6 +175,6 @@ pub fn initialize_available_targets() {
         LLVMInitializeBPFTarget,
         LLVMInitializeBPFTargetMC,
         LLVMInitializeBPFAsmPrinter,
-        LLVMInitializeBPFAsmParser,
+        LLVMInitializeBPFAsmParser
     );
 }

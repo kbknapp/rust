@@ -70,6 +70,7 @@ fn main() {
     let host = env::var("HOST").expect("HOST was not set");
     let is_crossed = target != host;
 
+    // We're making the assumption that LLVM is at least 6.0 for bpf
     let optional_components = &[
         "x86",
         "arm",
@@ -86,6 +87,7 @@ fn main() {
         "nvptx",
         "hexagon",
         "riscv",
+        "bpf",
     ];
 
     let mut version_cmd = Command::new(&llvm_config);
@@ -97,10 +99,6 @@ fn main() {
     } else {
         (8, 0)
     };
-
-    if major > 6 {
-        optional_components.push("bpf");
-    }
 
     let required_components = &[
         "ipo",
